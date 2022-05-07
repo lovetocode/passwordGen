@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 436.0
+margin_bottom = 351.0
+color = Color( 0.768627, 0.254902, 0.0313726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Length" type="LineEdit" parent="."]
+margin_left = 75.0
+margin_top = 222.0
+margin_right = 176.0
+margin_bottom = 251.0
+text = "Length"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Amount" type="LineEdit" parent="."]
+margin_left = 249.0
+margin_top = 222.0
+margin_right = 350.0
+margin_bottom = 251.0
+text = "Amount"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GenerateButton" type="Button" parent="."]
+margin_left = 183.0
+margin_top = 269.0
+margin_right = 254.0
+margin_bottom = 291.0
+text = "Generate"
+
+[node name="Passwords" type="RichTextLabel" parent="."]
+margin_left = 15.0
+margin_top = 23.0
+margin_right = 411.0
+margin_bottom = 216.0
+focus_mode = 2
+scroll_following = true
+selection_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="text_changed" from="Length" to="." method="_on_Length_text_changed"]
+[connection signal="text_changed" from="Amount" to="." method="_on_Amount_text_changed"]
